@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberZone Contacts</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* ЗАВАНТАЖЕННЯ ШРИФТУ ПРЯМО ТУТ */
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&display=swap');
+
+        body {
+            background-color: #000;
+            color: #fff;
+            /* Головний шрифт */
+            font-family: 'Open Sans', sans-serif; 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .logo-img {
+            max-width: 300px;
+            width: 100%;
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            text-align: center;
+            margin-bottom: 30px;
+            font-weight: 800; /* Дуже жирний (Extra Bold) */
+            letter-spacing: 1px;
+            white-space: nowrap;
+        }
+
+        /* КНОПКИ */
+        .btn-main {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            max-width: 350px;
+            padding: 18px 20px;
+            margin-bottom: 20px;
+            
+            /* ЗАОКРУГЛЕННЯ 8px */
+            border-radius: 8px; 
+            
+            text-decoration: none;
+            color: white;
+            font-size: 1.3rem;
+            font-weight: 700; /* Жирний текст */
+            font-style: normal; 
+            transition: transform 0.2s, box-shadow 0.2s;
+            border: none;
+            cursor: pointer;
+            
+            background: linear-gradient(90deg, #cc0000, #ff0000);
+            box-shadow: 0 0 15px rgba(255, 0, 0, 0.6);
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+            
+            /* Примусово ставимо шрифт і сюди */
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .btn-main i {
+            margin-left: 15px;
+            font-size: 1.2em;
+        }
+
+        .btn-main:hover {
+            transform: scale(1.03);
+            box-shadow: 0 0 25px rgba(255, 0, 0, 1);
+        }
+
+        .divider {
+            width: 80%;
+            max-width: 300px;
+            height: 2px;
+            background-color: #fff;
+            margin: 20px 0 30px 0;
+            opacity: 0.5;
+            box-shadow: 0 0 10px #fff;
+        }
+
+        .social-row {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+
+        .social-icon {
+            color: white;
+            font-size: 2.5rem;
+            transition: transform 0.3s, color 0.3s, text-shadow 0.3s;
+            text-decoration: none;
+        }
+
+        .social-icon:hover {
+            transform: translateY(-5px);
+        }
+        .social-icon.tg:hover { color: #00acee; text-shadow: 0 0 15px #00acee; }
+        .social-icon.inst:hover { color: #d6249f; text-shadow: 0 0 15px #d6249f; }
+        .social-icon.ds:hover { color: #5865F2; text-shadow: 0 0 15px #5865F2; }
+        .social-icon.tw:hover { color: #9146FF; text-shadow: 0 0 15px #9146FF; }
+
+        .map-container {
+            width: 100%;
+            max-width: 350px;
+            border: 2px solid #333;
+            padding: 5px;
+            border-radius: 8px; /* 8px */
+            background-color: #111;
+        }
+        
+        iframe {
+            display: block;
+            border-radius: 4px;
+        }
+
+        @media (max-width: 380px) {
+            h1 { font-size: 1.8rem; }
+            .btn-main { font-size: 1.1rem; }
+        }
+
+    </style>
+</head>
+<body>
+
+    <img src="logo.png" alt="Logo" class="logo-img">
+
+    <h1>НАШІ КОНТАКТИ</h1>
+
+    <a href="https://cyberzonelviv.booking.enes.tech" class="btn-main">
+        Забронювати комп'ютер <i class="fa-solid fa-user"></i>
+    </a>
+
+    <a href="tel:0634696818" class="btn-main">
+        +380634696818 <i class="fa-solid fa-phone"></i>
+    </a>
+
+    <div class="divider"></div>
+
+    <div class="social-row">
+        <a href="https://discord.gg/NKHygwTwxj" class="social-icon ds" target="_blank">
+            <i class="fa-brands fa-discord"></i>
+        </a>
+        
+        <a href="http://t.me/cyberzoneadmin" class="social-icon tg" target="_blank">
+            <i class="fa-brands fa-telegram"></i>
+        </a>
+
+        <a href="https://m.twitch.tv/cyberzonelviv/home" class="social-icon tw" target="_blank">
+            <i class="fa-brands fa-twitch"></i>
+        </a>
+
+        <a href="https://www.instagram.com/cyberzone_lviv/" class="social-icon inst" target="_blank">
+            <i class="fa-brands fa-instagram"></i>
+        </a>
+    </div>
+
+    <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1529.8611963518867!2d24.02340789184749!3d49.84415624751281!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473add5e24a59e11%3A0x272c1b53a1ef9476!2sCyberZone%20Lviv!5e0!3m2!1sru!2sua!4v1768290370443!5m2!1sru!2sua" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+</body>
+</html>
