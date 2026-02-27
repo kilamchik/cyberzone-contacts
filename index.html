@@ -8,13 +8,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
-        /* ЗАВАНТАЖЕННЯ ШРИФТУ ПРЯМО ТУТ */
         @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&display=swap');
 
         body {
-            background-color: #000;
-            color: #fff;
-            /* Головний шрифт */
+            /* Повертаємо зображення pro.jpg з темним перекриттям */
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('pro.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-color: #000; /* Резервний колір */
+            
+            color: #fff; /* Повертаємо білий колір тексту */
             font-family: 'Open Sans', sans-serif; 
             display: flex;
             flex-direction: column;
@@ -37,12 +41,13 @@
             text-transform: uppercase;
             text-align: center;
             margin-bottom: 30px;
-            font-weight: 800; /* Дуже жирний (Extra Bold) */
+            font-weight: 800;
             letter-spacing: 1px;
-            white-space: nowrap;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
+            color: #fff; /* Білий заголовок */
         }
 
-        /* КНОПКИ */
+        /* ЗАГАЛЬНІ СТИЛІ ДЛЯ КНОПОК */
         .btn-main {
             display: flex;
             align-items: center;
@@ -51,15 +56,12 @@
             max-width: 350px;
             padding: 18px 20px;
             margin-bottom: 20px;
-            
-            /* ЗАОКРУГЛЕННЯ 8px */
             border-radius: 8px; 
             
             text-decoration: none;
-            color: white;
+            color: white; /* Білий текст для стандартних кнопок */
             font-size: 1.3rem;
-            font-weight: 700; /* Жирний текст */
-            font-style: normal; 
+            font-weight: 700;
             transition: transform 0.2s, box-shadow 0.2s;
             border: none;
             cursor: pointer;
@@ -67,9 +69,15 @@
             background: linear-gradient(90deg, #cc0000, #ff0000);
             box-shadow: 0 0 15px rgba(255, 0, 0, 0.6);
             text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
-            
-            /* Примусово ставимо шрифт і сюди */
             font-family: 'Open Sans', sans-serif;
+        }
+
+        /* СТИЛЬ ДЛЯ ЖОВТОЇ КНОПКИ РЕЄСТРАЦІЇ */
+        .btn-tournament {
+            background: linear-gradient(90deg, #ffcc00, #ffea00); /* Жовтий градієнт */
+            color: #000; /* Чорний текст для контрасту */
+            box-shadow: 0 0 20px rgba(255, 204, 0, 0.7);
+            text-shadow: none; /* Прибираємо тінь тексту */
         }
 
         .btn-main i {
@@ -81,12 +89,17 @@
             transform: scale(1.03);
             box-shadow: 0 0 25px rgba(255, 0, 0, 1);
         }
+        
+        /* Ефект наведення для жовтої кнопки */
+        .btn-tournament:hover {
+            box-shadow: 0 0 30px rgba(255, 204, 0, 1);
+        }
 
         .divider {
             width: 80%;
             max-width: 300px;
             height: 2px;
-            background-color: #fff;
+            background-color: #fff; /* Біла лінія */
             margin: 20px 0 30px 0;
             opacity: 0.5;
             box-shadow: 0 0 10px #fff;
@@ -100,7 +113,7 @@
         }
 
         .social-icon {
-            color: white;
+            color: white; /* Білі іконки */
             font-size: 2.5rem;
             transition: transform 0.3s, color 0.3s, text-shadow 0.3s;
             text-decoration: none;
@@ -119,7 +132,7 @@
             max-width: 350px;
             border: 2px solid #333;
             padding: 5px;
-            border-radius: 8px; /* 8px */
+            border-radius: 8px;
             background-color: #111;
         }
         
@@ -147,6 +160,10 @@
 
     <a href="tel:0634696818" class="btn-main">
         +380634696818 <i class="fa-solid fa-phone"></i>
+    </a>
+
+    <a href="ПОСИЛАННЯ_НА_РЕЄСТРАЦІЮ" class="btn-main btn-tournament">
+        РЕЄСТРАЦІЯ НА ТУРНІР <i class="fa-solid fa-trophy"></i>
     </a>
 
     <div class="divider"></div>
